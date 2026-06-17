@@ -1,0 +1,17 @@
+🚀 How to Setup the Tooltip System in Your Scene
+1.Download this folder and drop it into your Unity Assets window.
+
+2.Drag the InteractiveTooltipCanvas.prefab file from your project folder and drop it directly into your scene hierarchy. (This adds the pre-calibrated text boundaries, fonts, and the red line material automatically).
+
+3.Click on the 3D lab object you want to make interactive, make sure it has a Collider, and attach the ToolTip.cs script to it.
+
+4.In the Inspector for your 3D object's ToolTip script, locate the Pinned Tooltip Prefab field. Drag the nested ToolTipBox (found inside your new Canvas prefab) straight into that slot.
+
+5. In ToolTip script, you can change the fade transition speed, label displacement heightOffset by changing Y, Locked Label displacement by changing pinnedHeight and HoverDelay as well.
+
+6. Simple label will appear as mouse goes onto the object after Hover Delay, for locking that label use Ctrl+LeftClick, you can also drag the label if you want and if you want to cancel or unlock that just tap cross on the label.
+
+7.Type your object's name in the Message To Show box and press Play!
+
+
+You may need To add TMP Essentials !

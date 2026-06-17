@@ -1,0 +1,51 @@
+# 🔊 Audio Feedback System - Setup & Usage Guide
+
+This guide explains how to initialize the audio manager, connect sounds to your lab equipment, and fully customize the audio library for your practicals.
+
+---
+
+## ⚙️ 1. Setup: Adding the Audio Manager
+Before any sound can play in your scene, you must add the central manager. You only need to do this once per scene:
+
+1. Right-click in your **Hierarchy** window and choose **Create Empty**.
+2. Name this new object exactly: `_AudioManager`
+3. Drag and drop the `AudioManager.cs` script onto this empty object.
+4. Locate the `MainSoundLibrary` asset file in your Project window. Drag and drop it into the **Sound Library** slot on the `AudioManager` component.
+
+---
+
+## 🔗 2. Connecting Audio to Your Objects
+Here is how you make your actual lab items (switches, beakers, bunsen burners) produce sound:
+
+1. Select your 3D object in the scene.
+2. Drag and drop the `SoundEmitter.cs` script onto it.
+3. Look at the object's Inspector window. Click the **Sound Name** dropdown and choose your sound.
+4. Check the **Is Looping Sound** box if the sound should play continuously (like a burner hiss). Leave it unchecked for quick sounds (like a click).
+5. In your own interaction scripts, trigger the audio with this single line:
+   `GetComponent<SoundEmitter>().Play();`
+
+---
+
+## 🎛️ 3. Managing the Sound Library (Your Choices)
+
+You have full control over the audio database. Here are your choices for handling sounds:
+
+### 🔹 Choice A: Using Pre-Existing Sounds
+You don't need to configure anything to use the default sounds. 
+Simply attach a `SoundEmitter` to your object, open the **Sound Name** dropdown menu, and select one of the ready-to-go options (e.g., `Click`, `Boil`, `Pour`).
+
+### 🔹 Choice B: Adding a New Sound
+If you found a new `.wav` or `.mp3` file for your specific experiment and want to add it to the system:
+1. Import your audio file into the Unity Project window.
+2. Click on the `MainSoundLibrary` asset file.
+3. In the Inspector, click the **`+`** button at the bottom of the list to create a new row.
+4. Type a keyword for it in the **Sound Name** box (e.g., `GlassShatter`).
+5. Drag your new audio file into the **Audio Clip** slot.
+*Result: Your new sound will instantly appear in the dropdown menu on every single object in the project!*
+
+### 🔹 Choice C: Changing an Existing Sound
+If you want to replace a default sound with a better-quality version (for example, swapping the default `Boil` sound for a more realistic bubbling audio file):
+1. Click on the `MainSoundLibrary` asset file.
+2. Find the entry you want to update (e.g., `Boil`).
+3. Drag your new audio file directly into that row's **Audio Clip** slot, replacing the old one.
+*Result: Every object across the entire project that uses the `Boil` sound will automatically update to your new file. You do not need to edit the objects or change any code!*
