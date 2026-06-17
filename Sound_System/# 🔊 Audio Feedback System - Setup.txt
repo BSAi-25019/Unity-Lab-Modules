@@ -22,7 +22,15 @@ Here is how you make your actual lab items (switches, beakers, bunsen burners) p
 3. Look at the object's Inspector window. Click the **Sound Name** dropdown and choose your sound.
 4. Check the **Is Looping Sound** box if the sound should play continuously (like a burner hiss). Leave it unchecked for quick sounds (like a click).
 5. In your own interaction scripts, trigger the audio with this single line:
-   `GetComponent<SoundEmitter>().Play();`
+   `GetComponent<SoundEmitter>().Play();
+
+To Stop you just Add 
+GetComponent<SoundEmitter>().Stop();
+
+For Code You May refer From ANy LLM
+E.g For Looping sounds Although they ahve been added in Box But still you can
+
+`
 
 ---
 
