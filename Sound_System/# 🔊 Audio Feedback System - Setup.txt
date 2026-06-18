@@ -57,3 +57,6 @@ If you want to replace a default sound with a better-quality version (for exampl
 2. Find the entry you want to update (e.g., `Boil`).
 3. Drag your new audio file directly into that row's **Audio Clip** slot, replacing the old one.
 *Result: Every object across the entire project that uses the `Boil` sound will automatically update to your new file. You do not need to edit the objects or change any code!*
+
+
+A sound Button has been added to control Volume ....
